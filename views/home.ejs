@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Hey From Server!</h1>
+    <h3>List of Movies</h3>
+    <div>
+        <% if (locals.movies) { %>
+         
+    
+    <table>
+        <tr>
+        <th>S.no</th>
+        <th>title</th>
+        <th>year</th>
+        <th>rating</th>
+        </tr>
+        <% movies.forEach((movie,index) => { %>
+        <tr>
+         <td><%= index+1 %></td>
+         <td><%= movie.title %></td>
+         <td><%= movie.year %></td>
+         <td><%= movie.rating %></td>
+         </tr>
+        <% }) %>
+        
+        
+    </table>
+    <% } %>
+    </div>
+</body>
+</html>
